@@ -28,6 +28,9 @@ final TextEditingController? controller;
             borderSide: const BorderSide(color: Colors.white),
             borderRadius: BorderRadius.circular(8),
           ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: const BorderSide(color: Colors.white),
+            borderRadius: BorderRadius.circular(8),)
         ),
       ),
     );

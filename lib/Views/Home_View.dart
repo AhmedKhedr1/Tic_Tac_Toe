@@ -72,7 +72,10 @@ class _HomeViewState extends State<HomeView> {
                     if (formkey.currentState!.validate()) {
                       Navigator.push(context, MaterialPageRoute(
                         builder: (context) {
-                          return const GameView();
+                          return GameView(
+                            player1Name: Player1controller.text,
+                            player2Name: Player2controller.text,
+                          );
                         },
                       ));
                     }
