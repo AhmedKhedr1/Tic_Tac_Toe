@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class Custom_TextField extends StatelessWidget {
   const Custom_TextField({
@@ -32,6 +33,7 @@ final TextEditingController? controller;
             borderSide: const BorderSide(color: Colors.white),
             borderRadius: BorderRadius.circular(8),)
         ),
+        inputFormatters: [LengthLimitingTextInputFormatter(10)],
       ),
     );
   }

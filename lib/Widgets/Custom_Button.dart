@@ -3,15 +3,16 @@ import 'package:flutter/material.dart';
 
 class Custom_button extends StatelessWidget {
    Custom_button({
-    super.key,required this.text
+    super.key,required this.text,required this.onTap
   });
 String text;
+void Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 64),
+    return GestureDetector(
+      onTap:onTap ,
       child: Container(
-        width: double.infinity,
+        width: 150,
         height: 50,
         decoration: BoxDecoration(
             color: Colors.green, borderRadius: BorderRadius.circular(15)),

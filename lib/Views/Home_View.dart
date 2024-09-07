@@ -67,20 +67,21 @@ class _HomeViewState extends State<HomeView> {
                 },
                 hint: 'Enter Player 2 Name',
               ),
-              GestureDetector(
-                  onTap: () {
-                    if (formkey.currentState!.validate()) {
-                      Navigator.push(context, MaterialPageRoute(
-                        builder: (context) {
-                          return GameView(
-                            player1Name: Player1controller.text,
-                            player2Name: Player2controller.text,
-                          );
-                        },
-                      ));
-                    }
-                  },
-                  child:  Custom_button(text: 'Enter Game',))
+              Custom_button(
+                text: 'Start Game',
+                onTap: () {
+                  if (formkey.currentState!.validate()) {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return GameView(
+                          player1Name: Player1controller.text,
+                          player2Name: Player2controller.text,
+                        );
+                      },
+                    ));
+                  }
+                },
+              )
             ],
           ),
         ),

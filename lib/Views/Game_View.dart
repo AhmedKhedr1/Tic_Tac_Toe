@@ -4,8 +4,8 @@ import 'package:tic_tac_toe/Widgets/Game_Bar.dart';
 import 'package:tic_tac_toe/Widgets/Game_Button.dart';
 
 class GameView extends StatefulWidget {
-  GameView({super.key,required this.player1Name,required this.player2Name});
-  String player1Name ;
+  GameView({super.key, required this.player1Name, required this.player2Name});
+  String player1Name;
   String player2Name;
 
   @override
@@ -18,6 +18,7 @@ class _GameViewState extends State<GameView> {
     return Scaffold(
         backgroundColor: Color(0xff323D58),
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: Color(0xff323D58),
           centerTitle: true,
           title: const Text(
@@ -30,11 +31,15 @@ class _GameViewState extends State<GameView> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-               Game_Bar(player1Name: widget.player1Name,player2Name: widget.player2Name,),
+              Game_Bar(
+                player1Name: widget.player1Name,
+                player2Name: widget.player2Name,
+              ),
               const SizedBox(
                 height: 40,
               ),
               Expanded(
+                flex: 2,
                 child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 3,
@@ -47,6 +52,23 @@ class _GameViewState extends State<GameView> {
                   },
                 ),
               ),
+              Expanded(
+                  flex: 1,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Custom_button(
+                        text: 'Reset',
+                        onTap: () {},
+                      ),
+                      Custom_button(
+                        text: 'Quit',
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                      )
+                    ],
+                  ))
             ],
           ),
         ));
