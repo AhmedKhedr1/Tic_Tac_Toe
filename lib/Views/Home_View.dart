@@ -80,7 +80,7 @@ class _HomeViewState extends State<HomeView> {
                       ));
                     }
                   },
-                  child: const Custom_button())
+                  child:  Custom_button(text: 'Enter Game',))
             ],
           ),
         ),

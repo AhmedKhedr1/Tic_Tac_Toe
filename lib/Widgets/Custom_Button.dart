@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 
 class Custom_button extends StatelessWidget {
-  const Custom_button({
-    super.key,
+   Custom_button({
+    super.key,required this.text
   });
-
+String text;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,8 +15,8 @@ class Custom_button extends StatelessWidget {
         height: 50,
         decoration: BoxDecoration(
             color: Colors.green, borderRadius: BorderRadius.circular(15)),
-        child: const Center(
-          child: Text('Enter Game ',
+        child:  Center(
+          child: Text(text,
               style: TextStyle(color: Colors.white, fontSize: 16)),
         ),
       ),

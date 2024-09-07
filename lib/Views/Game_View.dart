@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
+import 'package:tic_tac_toe/Widgets/Custom_Button.dart';
 import 'package:tic_tac_toe/Widgets/Game_Bar.dart';
 import 'package:tic_tac_toe/Widgets/Game_Button.dart';
 
 class GameView extends StatefulWidget {
-  GameView({super.key, required this.player1Name, required this.player2Name});
-  String player1Name;
-  String player2Name;
+  GameView({super.key, this.player1Name, this.player2Name});
+  String? player1Name;
+  String? player2Name;
 
   @override
   State<GameView> createState() => _GameViewState();
@@ -33,7 +32,7 @@ class _GameViewState extends State<GameView> {
             children: [
               const Game_Bar(),
               const SizedBox(
-                height: 150,
+                height: 40,
               ),
               Expanded(
                 child: GridView.builder(
@@ -47,7 +46,7 @@ class _GameViewState extends State<GameView> {
                     return const Game_Button();
                   },
                 ),
-              )
+              ),
             ],
           ),
         ));
