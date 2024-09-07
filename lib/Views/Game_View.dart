@@ -4,9 +4,9 @@ import 'package:tic_tac_toe/Widgets/Game_Bar.dart';
 import 'package:tic_tac_toe/Widgets/Game_Button.dart';
 
 class GameView extends StatefulWidget {
-  GameView({super.key, this.player1Name, this.player2Name});
-  String? player1Name;
-  String? player2Name;
+  GameView({super.key,required this.player1Name,required this.player2Name});
+  String player1Name ;
+  String player2Name;
 
   @override
   State<GameView> createState() => _GameViewState();
@@ -30,7 +30,7 @@ class _GameViewState extends State<GameView> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Game_Bar(),
+               Game_Bar(player1Name: widget.player1Name,player2Name: widget.player2Name,),
               const SizedBox(
                 height: 40,
               ),

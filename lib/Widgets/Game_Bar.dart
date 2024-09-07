@@ -2,28 +2,27 @@
 import 'package:flutter/material.dart';
 
 class Game_Bar extends StatelessWidget {
-  const Game_Bar({
-    super.key,
-  });
-
+   Game_Bar({required this.player1Name,required this.player2Name});
+String player1Name;
+String player2Name;
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return  Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Column(
           children: [
             Text(
-              'ahmed',
+              player1Name,
               style: TextStyle(fontSize: 25, color: Colors.amber),
             ),
-            Text(
+           const Text(
               '0',
               style: TextStyle(fontSize: 25, color: Colors.amber),
             ),
           ],
         ),
-         SizedBox(
+        const SizedBox(
           height: 100,
            child: VerticalDivider(
             color: Colors.white,
@@ -36,10 +35,10 @@ class Game_Bar extends StatelessWidget {
         Column(
           children: [
             Text(
-              'ahmed',
+              player2Name,
               style: TextStyle(fontSize: 25, color: Colors.amber),
             ),
-            Text(
+           const Text(
               '0',
               style: TextStyle(fontSize: 25, color: Colors.amber),
             ),
