@@ -2,24 +2,29 @@
 import 'package:flutter/material.dart';
 
 class Game_Button extends StatelessWidget {
-  const Game_Button({
+   Game_Button({
     super.key,
   });
 
+  void Function()? ontap;
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 90,
-      width: 90,
-      decoration: BoxDecoration(
-        color: Colors.amber,
-        borderRadius: BorderRadius.circular(12),
+    return GestureDetector(
+      onTap:ontap,
+      child: Container(
+        height: 100,
+        width: 100,
+        decoration: BoxDecoration(
+          color: Colors.amber,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Center(
+            child: Text(
+          '',
+          style:const TextStyle(color: Colors.white, fontSize: 70),
+        )),
       ),
-      child:const Center(
-          child: Text(
-        'O',
-        style: TextStyle(color: Colors.white, fontSize: 70),
-      )),
     );
   }
 }

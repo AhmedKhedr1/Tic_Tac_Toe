@@ -14,11 +14,11 @@ String player2Name;
           children: [
             Text(
               player1Name,
-              style: TextStyle(fontSize: 25, color: Colors.amber),
+              style: TextStyle(fontSize: 25, color: Colors.amberAccent),
             ),
            const Text(
               '0',
-              style: TextStyle(fontSize: 25, color: Colors.amber),
+              style: TextStyle(fontSize: 25, color: Colors. amberAccent),
             ),
           ],
         ),
@@ -36,11 +36,11 @@ String player2Name;
           children: [
             Text(
               player2Name,
-              style: TextStyle(fontSize: 25, color: Colors.amber),
+              style:const TextStyle(fontSize: 25, color: Colors.amberAccent),
             ),
            const Text(
               '0',
-              style: TextStyle(fontSize: 25, color: Colors.amber),
+              style: TextStyle(fontSize: 25, color: Colors.amberAccent),
             ),
           ],
         ),

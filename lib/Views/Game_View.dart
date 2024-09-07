@@ -15,6 +15,7 @@ class GameView extends StatefulWidget {
 class _GameViewState extends State<GameView> {
   @override
   Widget build(BuildContext context) {
+    String text = 'x';
     return Scaffold(
         backgroundColor: Color(0xff323D58),
         appBar: AppBar(
@@ -48,7 +49,7 @@ class _GameViewState extends State<GameView> {
                       childAspectRatio: 1),
                   itemCount: 9,
                   itemBuilder: (context, index) {
-                    return const Game_Button();
+                    return Game_Button();
                   },
                 ),
               ),
@@ -58,7 +59,7 @@ class _GameViewState extends State<GameView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Custom_button(
-                        text: 'Reset',
+                        text: 'Restart',
                         onTap: () {},
                       ),
                       Custom_button(
