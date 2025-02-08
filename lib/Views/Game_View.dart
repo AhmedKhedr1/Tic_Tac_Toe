@@ -49,7 +49,11 @@ class _GameViewState extends State<GameView> {
                       childAspectRatio: 1),
                   itemCount: 9,
                   itemBuilder: (context, index) {
-                    return Game_Button();
+                    return Game_Button(ontap: () {
+                      
+                    },
+
+                    );
                   },
                 ),
               ),

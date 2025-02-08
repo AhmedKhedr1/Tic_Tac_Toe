@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:tic_tac_toe/Views/Game_view.dart';
 import 'package:tic_tac_toe/Widgets/Custom_Button.dart';
 import 'package:tic_tac_toe/Widgets/Custom_TextField.dart';

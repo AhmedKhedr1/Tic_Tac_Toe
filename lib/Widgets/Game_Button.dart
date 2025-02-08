@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class Game_Button extends StatelessWidget {
    Game_Button({
-    super.key,
+    super.key,required this.ontap
   });
 
   void Function()? ontap;
