@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:tic_tac_toe/Widgets/CustomButton.dart';
 
@@ -14,9 +13,9 @@ class button_Bar extends StatelessWidget {
       children: [
         CustomButton(
             ButtonHeight: 50,
-            Buttonwidth: 140,
+            Buttonwidth: 180,
             action: () {},
-            ButtonText: 'Reset',
+            ButtonText: 'Reset Game',
             ButtonColor: Colors.green),
         CustomButton(
             ButtonHeight: 50,
