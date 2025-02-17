@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:tic_tac_toe/Widgets/GameButton.dart';
+import 'package:tic_tac_toe/Widgets/PlayerNameBar.dart';
 import 'package:tic_tac_toe/Widgets/button_bar.dart';
 import 'package:tic_tac_toe/constant.dart';
 
@@ -15,14 +16,27 @@ class Gameview extends StatefulWidget {
 }
 
 class _GameviewState extends State<Gameview> {
+  bool isxturn = true;
+  void onchange() {
+    setState(() {
+      isxturn = !isxturn;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: KBackgroundColor,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
         child: Column(
           children: [
+            PlayerNameBar(
+              Player1Name: widget.Player1Name,
+              Player2Name: widget.Player2Name,
+              isxturn: isxturn,
+            ),
+            const SizedBox(height: 20),
             Expanded(
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -33,7 +47,10 @@ class _GameviewState extends State<Gameview> {
                 ),
                 itemCount: 9,
                 itemBuilder: (context, index) {
-                  return GameButton();
+                  return GameButton(
+                    onturnchange: onchange,
+                    isxturn: isxturn,
+                  );
                 },
               ),
             ),
