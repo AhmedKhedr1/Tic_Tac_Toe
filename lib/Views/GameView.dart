@@ -28,7 +28,8 @@ class _GameviewState extends State<Gameview> {
     return Scaffold(
       backgroundColor: KBackgroundColor,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+        padding:
+            const EdgeInsets.only(top: 80, bottom: 30, right: 14, left: 14),
         child: Column(
           children: [
             PlayerNameBar(
