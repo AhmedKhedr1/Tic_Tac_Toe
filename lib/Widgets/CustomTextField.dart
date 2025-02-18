@@ -19,6 +19,7 @@ class CustomTextField extends StatelessWidget {
         top: 18,
       ),
       child: TextFormField(
+        maxLength: 10,
         validator: validator,
         controller: controller,
         style: const TextStyle(color: Colors.white),

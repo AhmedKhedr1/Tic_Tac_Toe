@@ -32,7 +32,7 @@ class PlayerNameBar extends StatelessWidget {
             const Text(
               "X",
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Colors.red,
               ),
@@ -57,7 +57,7 @@ class PlayerNameBar extends StatelessWidget {
             const Text(
               "O",
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Colors.blue,
               ),
